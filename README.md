@@ -17,7 +17,7 @@ memoizedAdd(1, 2); // Promise
 ```
 
 The memoization still _works_&mdash;if you call `memoizedAdd(1, 2)` again it will return the same
-`Promise`, without executing `add` another time&mdash;but it's not very usable anymore&mdash;every
+`Promise`, without executing `add` another time&mdash;but it's not very usable anymore: every
 call to `memoizedAdd` will have to `await` the result of the promise.
 
 In some cases, it's easier to deal with the result synchronously, if and when it's available; and
