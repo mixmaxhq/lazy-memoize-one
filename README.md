@@ -151,6 +151,6 @@ We welcome bug reports and feature suggestions. PRs are even better!
 [`memoize-one`]: https://github.com/alexreardon/memoize-one
 [in React components]: https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#what-about-memoization
 [custom equality function]: https://github.com/alexreardon/memoize-one#custom-equality-function
-[rationale]: #Rationale
+[rationale]: #rationale
 [when your result function throws]: https://github.com/alexreardon/memoize-one#when-your-result-function-throws
 [`lazy-memoize`]: https://github.com/akdor1154/node-lazy-memoize#readme
