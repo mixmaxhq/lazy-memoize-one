@@ -4,8 +4,10 @@
   "description": "A `memoize-one` wrapper that resolves the latest invocation asynchronously",
   "main": "src/index.js",
   "scripts": {
-    "test": "jest",
-    "prepublishOnly": "npm test"
+    "ci": "npm run lint && npm test",
+    "lint": "eslint .",
+    "prepublishOnly": "npm test",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
