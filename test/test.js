@@ -18,20 +18,20 @@ test('it expects the result function to return a promise', () => {
 test('it supports custom equality functions', async () => {
   const customMemo = memoize(asyncIdentity, _.isEqual);
 
-  memo({foo: 'bar'});
+  memo({ foo: 'bar' });
 
   // Wait a turn of the event loop for the promise to resolve.
   await Promise.resolve();
 
   // `undefined` because this argument breaks the cache, since it fails reference equality.
-  expect(memo({foo: 'bar'})).toBeUndefined();
+  expect(memo({ foo: 'bar' })).toBeUndefined();
 
-  customMemo({foo: 'bar'});
+  customMemo({ foo: 'bar' });
 
   await Promise.resolve();
 
-  const result3 = customMemo({foo: 'bar'});
-  const result4 = customMemo({foo: 'bar'});
+  const result3 = customMemo({ foo: 'bar' });
+  const result4 = customMemo({ foo: 'bar' });
 
   expect(result4).toBe(result3); // Since the arguments are deep equal.
 });
@@ -120,7 +120,7 @@ describe('the memo function', () => {
 
 describe('the `ready` function', () => {
   let ready;
-  beforeEach(() => ready = jest.fn());
+  beforeEach(() => (ready = jest.fn()));
 
   test('it is not required', async () => {
     expect(() => memo('foo')).not.toThrow();
